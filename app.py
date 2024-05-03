@@ -193,14 +193,8 @@ def _launch_demo(args, model, tokenizer):
             """\
 <center><font size=3>Hermes Vision. \
 (Hermes Demo with vision)</center>""")
-        gr.Markdown("""\
-<center><font size=4>Qwen-VL <a href="https://modelscope.cn/models/qwen/Qwen-VL/summary">🤖 </a> 
-| <a href="https://huggingface.co/Qwen/Qwen-VL">🤗</a>&nbsp ｜ 
-Qwen-VL-Chat <a href="https://modelscope.cn/models/qwen/Qwen-VL-Chat/summary">🤖 </a> | 
-<a href="https://huggingface.co/Qwen/Qwen-VL-Chat">🤗</a>&nbsp ｜ 
-&nbsp<a href="https://github.com/QwenLM/Qwen-VL">Github</a></center>""")
 
-        chatbot = gr.Chatbot(label='Qwen-VL-Chat', elem_classes="control-height").style(height=500)
+        chatbot = gr.Chatbot(label='Hermes-Vision', elem_classes="control-height").style(height=500)
         query = gr.Textbox(lines=2, label='Input')
         task_history = gr.State([])
 
