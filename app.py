@@ -1,7 +1,4 @@
-# Copyright (c) Alibaba Cloud.
-#
-# This source code is licensed under the license found in the
-# LICENSE file in the root directory of this source tree.
+
 import os
 # os.system('pip install tiktoken')
 # os.system('pip install "modelscope" --upgrade -f https://pypi.org/project/modelscope/')
@@ -191,10 +188,10 @@ def _launch_demo(args, model, tokenizer):
     with gr.Blocks() as demo:
         gr.Markdown(
             """\
-<center><font size=3>Hermes Vision. \
-(Hermes Demo with vision)</center>""")
+<center><font size=3>Hephaestus Vision. \
+(Hephaestus Demo with vision)</center>""")
 
-        chatbot = gr.Chatbot(label='Hermes-Vision', elem_classes="control-height").style(height=500)
+        chatbot = gr.Chatbot(label='Hephaestus-Vision', elem_classes="control-height").style(height=500)
         query = gr.Textbox(lines=2, label='Input')
         task_history = gr.State([])
 
@@ -213,7 +210,7 @@ def _launch_demo(args, model, tokenizer):
         addfile_btn.upload(add_file, [chatbot, task_history, addfile_btn], [chatbot, task_history], show_progress=True)
 
         gr.Markdown("""\
-<font size=2>Note: This is the demo of Hermes Vision. \
+<font size=2>Note: This is the demo of Hephaestus Vision. \
 """)
 
     demo.queue().launch(
